@@ -1,0 +1,15 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Content }}</p>
+
+    <div class="post-grid">
+        {{ range first 6 (where .Site.RegularPages "Section" "blog") }}
+            <article class="post-card">
+                <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+                <p class="post-date">{{ .Date.Format "January 2, 2006" }}</p>
+                <p class="post-excerpt">{{ .Summary | truncate 150 }}</p>
+                <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+            </article>
+        {{ end }}
+    </div>
+{{ end }}
