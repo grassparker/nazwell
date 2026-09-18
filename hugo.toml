@@ -1,0 +1,4 @@
+baseURL = 'https://example.org/'
+locale = 'en-uk'
+title = 'Nazwell'
+theme = 'PaperMod'
