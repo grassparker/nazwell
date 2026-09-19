@@ -3,7 +3,7 @@
     <ul>
         {{ range .Pages }}
             <li>
-                <a href="{{ .Permalink }}">{{ .Title }}</a> ({{ .Count }} posts)
+                <a href="{{ .Permalink }}">{{ .Title }}</a> ({{ len .Pages }} posts)
             </li>
         {{ end }}
     </ul>
